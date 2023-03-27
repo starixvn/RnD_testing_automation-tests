@@ -1,7 +1,7 @@
 import type { PlaywrightTestConfig } from "@playwright/test";
 import { devices } from "@playwright/test";
 
-const gameId = process.env.npm_config_gameId ?? "7";
+const testMatch = process.env.npm_config_gameId ? `${process.env.npm_config_gameId}-*` : "*";
 
 const config: PlaywrightTestConfig = {
     retries: 1,
@@ -36,14 +36,14 @@ const config: PlaywrightTestConfig = {
     projects: [
         {
             name: "Smoke_CI",
-            testMatch: `**/${gameId}-*/tests/*.smoke.spec.ts`,
+            testMatch: `**/${testMatch}/tests/*.smoke.spec.ts`,
             use: {
                 ...devices["Desktop Chrome"],
             },
         },
         {
             name: "E2E_CI",
-            testMatch: `**/${gameId}-*/tests/*.e2e.spec.ts`,
+            testMatch: `**/${testMatch}/tests/*.e2e.spec.ts`,
             use: {
                 ...devices["Desktop Chrome"],
             },
