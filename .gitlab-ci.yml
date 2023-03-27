@@ -8,12 +8,9 @@ stages:
 cache:
   key:
     files:
-      - package-lock.json
+      - yarn.lock
   paths:
-    - .npm/
-
-before_script:
-  - npm ci --cache .npm
+    - node_modules
 
 docker-build:
   image: hub.lumigame.com/base/docker:20.10.7
