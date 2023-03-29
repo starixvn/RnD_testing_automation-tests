@@ -27,5 +27,5 @@ export const DragonTigerConfigs: Components.GameConfiguration = {
         uat: "IT56Test789",
         prod: "supertestte120201009",
     },
-     productId: 1618
+     productId: "1618"
 };

@@ -22,4 +22,14 @@ export const BaccaratConfigs: Components.GameConfiguration = {
         bankerPair: 12,
     },
     betBoard: false,
+    accounts: {
+        local: "222230",
+        local1: "222230",
+        local2: "222230",
+        local3: "222230",
+        sit: "supertestsaba70",
+        uat: "IT59Test789",
+        prod: "supertestte120201013",
+    },
+    productId: "1621"
 };
