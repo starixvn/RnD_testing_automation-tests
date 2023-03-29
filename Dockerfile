@@ -1,14 +1,10 @@
 FROM hub.lumigame.com/base/playwright:v1.24.0-focal
-ARG gameId
 
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
-COPY tests/games/$gameId-* /app/tests/games
-COPY playwright.config.ts .
 COPY package.json .
 COPY .npmrc .
 
-RUN test -n "$gameId" || (echo "gameId not set" && false)
-RUN yarn install \
+RUN npm install \
  && npx playwright@1.24 install chromium

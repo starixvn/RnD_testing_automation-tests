@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test --project=Smoke_CI",
-    "e2e": "playwright test --project=E2E_CI"
+    "e2e": "playwright test --project=E2E_CI "
   },
   "repository": {
     "type": "git",
