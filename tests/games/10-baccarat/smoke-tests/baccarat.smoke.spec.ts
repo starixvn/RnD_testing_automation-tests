@@ -1,4 +1,4 @@
-import { BaccaratLocators } from "../locators/baccarat-locators";
+import { BaccaratLocators } from "../baccarat-locators";
 import { BaccaratConfigs } from "../baccarat-configs";
 import { SmokeBases } from "sc-automation-core";
 

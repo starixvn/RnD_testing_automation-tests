@@ -1,4 +1,4 @@
-import { DragonTigerLocators } from "../locators/dragontiger-locators";
+import { DragonTigerLocators } from "../dragontiger-locators";
 import { DragonTigerConfigs } from "../dragontiger-configs";
 import { SmokeBases } from "sc-automation-core";
 

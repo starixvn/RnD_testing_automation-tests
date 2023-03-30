@@ -36,14 +36,14 @@ const config: PlaywrightTestConfig = {
     projects: [
         {
             name: "Smoke_CI",
-            testMatch: `**/${testMatch}/tests/*.smoke.spec.ts`,
+            testMatch: `**/${testMatch}/smoke-tests/*.smoke.spec.ts`,
             use: {
                 ...devices["Desktop Chrome"],
             },
         },
         {
             name: "E2E_CI",
-            testMatch: `**/${testMatch}/tests/*.e2e.spec.ts`,
+            testMatch: `**/${testMatch}/e2e-tests/*.e2e.spec.ts`,
             use: {
                 ...devices["Desktop Chrome"],
             },
