@@ -43,8 +43,11 @@ smoketest:
   after_script:
     - du -hs /ms-playwright/*
   retry: 1
-  when: always   
-
+  rules:
+    - if: $TRIGGER == "true"
+      when: always
+    - when: never
+  
   artifacts:
     paths:
       - playwright-report
