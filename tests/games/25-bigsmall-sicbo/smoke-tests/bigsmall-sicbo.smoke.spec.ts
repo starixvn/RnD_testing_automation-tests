@@ -1,13 +1,13 @@
-import { BigSmallSicBoLocators } from "../locators/bigsmall-sicbo-locators";
+import { BigSmallSicBoLocators } from "../bigsmall-sicbo-locators";
 import { BigSmallSicBoConfigs } from "../bigsmall-sicbo-configs";
-import { IBaseOptions, TableGameBase } from "../../../core/smoke-game-bases";
+import { SmokeBases } from "sc-automation-core";
 
-class BigSmallSicBoSmokeSpec extends TableGameBase {
+class BigSmallSicBoSmokeSpec extends SmokeBases.TableGameBase {
     /**
      *
      */
     constructor() {
-        const smokeOptions: IBaseOptions = {
+        const smokeOptions: SmokeBases.IBaseOptions = {
             gameConfiguration: BigSmallSicBoConfigs,
             locators: BigSmallSicBoLocators,
             waitBetTimeout: 12000,

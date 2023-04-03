@@ -1,14 +1,13 @@
-import {test} from '../../../core/base-fixture'
-import { HeroesSlotLocators } from "../locators/heroes-slot-locators";
+import { HeroesSlotLocators } from "../heroes-slot-locators";
 import { HeroesSlotConfigs } from "../heroes-slot-configs";
-import { IBaseOptions, SlotGameBase } from "../../../core/smoke-game-bases";
+import { SmokeBases } from "sc-automation-core";
 
-class HeroesSlotSmokeSpec extends SlotGameBase {
+class HeroesSlotSmokeSpec extends SmokeBases.SlotGameBase {
     /**
      *
      */
     constructor() {
-        const smokeOptions: IBaseOptions = {
+        const smokeOptions: SmokeBases.IBaseOptions = {
             placeBetChoices: [HeroesSlotConfigs.choices[0]],
             gameConfiguration: HeroesSlotConfigs,
             locators: HeroesSlotLocators,
