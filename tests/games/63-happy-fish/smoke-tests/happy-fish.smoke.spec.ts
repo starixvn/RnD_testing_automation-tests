@@ -3,19 +3,19 @@ import { HappyFishConfigs } from "../happy-fish-configs";
 import { SmokeBases } from "sc-automation-core";
 
 class HappyFishSmokeSpec extends SmokeBases.SlotGameBase {
-    /**
-     *
-     */
-    constructor() {
-        const smokeOptions: SmokeBases.IBaseOptions = {
-            placeBetChoices: [HappyFishConfigs.choices[0]],
-            gameConfiguration: HappyFishConfigs,
-            locators: HappyFishLocators,
-            waitBetTimeout: 1000,
-            snapshotFolderPath: __filename,
-        };
-        super(smokeOptions);
-    }
+  /**
+   *
+   */
+  constructor() {
+    const smokeOptions: SmokeBases.IBaseOptions = {
+      placeBetChoices: ["1", "25"],
+      gameConfiguration: HappyFishConfigs,
+      locators: HappyFishLocators,
+      waitBetTimeout: 1000,
+      snapshotFolderPath: __filename,
+    };
+    super(smokeOptions);
+  }
 }
 
 new HappyFishSmokeSpec().start();
