@@ -39,6 +39,7 @@ smoketest:
   tags:
     - auto-test-prod
   script:
+    - cd /app
     - npm run test --env=$ENV --gameid=$GAMEID
   after_script:
     - du -hs /ms-playwright/*
@@ -62,6 +63,7 @@ e2etest:
   tags:
     - auto-test-prod
   script:
+    - cd /app
     - npm run e2e --env=$ENV --gameid=$GAMEID
   after_script:
     - du -hs /ms-playwright/*
