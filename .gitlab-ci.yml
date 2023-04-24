@@ -23,24 +23,26 @@ docker-build:
   services:
     - docker:dind
   before_script:
-    - export CI_REGISTRY_IMAGE=$DOCKER_REG_LOCAL_URL/pentagon-base/automation-tests-base
+    - export CI_REGISTRY_IMAGE=$DOCKER_REG_LOCAL_URL/pentagon-base/automation-tests-game-$GAMEID
     - docker login -u $DOCKER_REG_LOCAL_USERNAME -p $DOCKER_REG_LOCAL_PASSWORD $DOCKER_REG_LOCAL_URL
   script:   
-     - docker build --build-arg --pull -t $CI_REGISTRY_IMAGE:latest .
+     - docker build --build-arg gameId=$GAMEID --build-arg runtimeFolderPath=$RuntimeFolderPath --pull -t $CI_REGISTRY_IMAGE:latest .
      - docker push $CI_REGISTRY_IMAGE:latest
   rules:
-    - if: $TRIGGER == "true"
-      when: never
-    - when: always
+    - if: $GAMEID
+      when: always
+    - when: never
+
+include: 'auto-runtime*/**/.gitlab-ci.yml'
 
 smoketest:
-  image: hub.lumigame.com/pentagon-base/automation-tests-base
+  image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
   stage: test
   tags:
     - auto-test-prod
   script:
     - cd /app
-    - npm run test --env=$ENV --gameid=$GAMEID
+    - npm run test --env=$ENV 
   after_script:
     - du -hs /ms-playwright/*
   retry: 1
@@ -58,13 +60,13 @@ smoketest:
     expire_in: 1 day
 
 e2etest:
-  image: hub.lumigame.com/pentagon-base/automation-tests-base
+  image: hub.lumigame.com/pentagon-base/automation-tests-game-$GAMEID
   stage: test
   tags:
     - auto-test-prod
   script:
     - cd /app
-    - npm run e2e --env=$ENV --gameid=$GAMEID
+    - npm run e2e --env=$ENV 
   after_script:
     - du -hs /ms-playwright/*
   retry: 1

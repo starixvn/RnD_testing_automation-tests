@@ -1,0 +1,10 @@
+docker-build-game-9:
+  extends: docker-build
+  variables:
+    GAMEID: 9
+    RuntimeFolderPath: "auto-runtime-latest"   
+  rules:
+    - changes:
+      - auto-runtime-latest/tests/games/9*/**/*
+      - auto-runtime-latest/package.json
+      - auto-runtime-latest/playwright.config.ts

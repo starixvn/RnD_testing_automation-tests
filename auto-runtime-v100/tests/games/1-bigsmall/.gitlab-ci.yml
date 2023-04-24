@@ -1,0 +1,10 @@
+docker-build-game-1:
+  extends: docker-build
+  variables:
+    GAMEID: 1
+    RuntimeFolderPath: "auto-runtime-v100"   
+  rules:
+    - changes:
+      - auto-runtime-v100/tests/games/1*/**/*
+      - auto-runtime-v100/package.json
+      - auto-runtime-v100/playwright.config.ts

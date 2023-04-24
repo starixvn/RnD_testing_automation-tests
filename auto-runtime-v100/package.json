@@ -1,0 +1,25 @@
+{
+  "name": "automation-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --project=Smoke_CI",
+    "e2e": "playwright test --project=E2E_CI "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git3.nexdev.net:l1/ui-automation-tests/automation-tests.git"
+  },
+  "author": "pentagon@luminet.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "1.24.0",
+    "notepack.io": "^3.0.1",
+    "tesseract.ts": "^1.1.2",
+    "tslib": "2.4.1"
+  },
+  "dependencies": {
+    "sc-automation-core": "^1.0.2"
+  }
+}
