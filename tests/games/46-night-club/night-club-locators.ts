@@ -11,6 +11,6 @@ export const NightClubLocators = [
     new ImageLocator("historyPopup", 432, 5, 410, 60),
     new ImageLocator("stake1", 360, 660),
     new ImageLocator("spin", 1131, 625),
-    new ImageLocator("submitBetBoard", 633, 663),
+    new ImageLocator("submitPayline", 633, 663),
     new ImageLocator("clearChoices", 957, 575),
 ];

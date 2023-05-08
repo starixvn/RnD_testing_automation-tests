@@ -11,6 +11,6 @@ export const MagicForestLocators = [
     new ImageLocator("historyPopup", 546, 40, 192, 50),
     new ImageLocator("stake1", 305, 550, 70, 50),
     new ImageLocator("spin", 927, 555, 120, 120),
-    new ImageLocator("submitBetBoard", 532, 612, 210, 55),
+    new ImageLocator("submitPayline", 532, 612, 210, 55),
     new ImageLocator("clearChoices", 860, 110, 182, 58),
 ];

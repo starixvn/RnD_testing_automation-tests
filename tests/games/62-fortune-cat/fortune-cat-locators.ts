@@ -11,6 +11,6 @@ export const FortuneCatLocators = [
     new ImageLocator("historyPopup", 485, 30, 310, 62),
     new ImageLocator("stake1", 282, 622),
     new ImageLocator("spin", 1125, 588),
-    new ImageLocator("submitBetBoard", 635, 650),
+    new ImageLocator("submitPayline", 635, 650),
     new ImageLocator("clearChoices", 975, 575),
 ];
