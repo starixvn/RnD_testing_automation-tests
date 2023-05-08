@@ -2,9 +2,9 @@ import { Components } from "sc-automation-core";
 const ImageLocator = Components.ImageLocator;
 
 export const FanTanLocators = [
-    new ImageLocator("evenChoice", 501, 348, 135, 42),
+    new ImageLocator("evenChoice", 501, 348, 81, 42),
     new ImageLocator("evenOwnbet", 527, 387, 81, 24),
-    new ImageLocator("oddChoice", 652, 348, 138, 42),
+    new ImageLocator("oddChoice", 652, 348, 69, 42),
     new ImageLocator("oddOwnbet", 680, 387, 81, 24),
     new ImageLocator("playerBalance", 162, 690, 126, 24),
     new ImageLocator("hamburgerMenu", 80, 295, 0, 0),

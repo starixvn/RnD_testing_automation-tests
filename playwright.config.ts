@@ -18,7 +18,7 @@ const config: PlaywrightTestConfig = {
     reporter: [["html", { open: "never" }]],
     use: {
         actionTimeout: 0,
-        trace: "on-first-retry",
+        trace: "off",
         headless: true,
         viewport: {
             width: 1280,

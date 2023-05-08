@@ -5,8 +5,8 @@ export const KenoProMaxLocators = [
     new Components.ImageLocator("bigOwnbet", 450, 370, 30, 30),
     new Components.ImageLocator("smallChoice", 757, 330, 60, 50),
     new Components.ImageLocator("playerBalance", 192, 644, 125, 23),
-    new Components.ImageLocator("hamburgerMenu", 0, 0, 0, 0), //no hamberger icon
-    new Components.ImageLocator("historyMenu", 57, 201, 0, 0),
+    new Components.ImageLocator("hamburgerMenu", 28, 152, 40, 40), //no hamberger icon
+    new Components.ImageLocator("historyMenu", 32, 352, 40, 40),
     new Components.ImageLocator("historyPopup", 579, 80, 250, 30),
     new Components.ImageLocator("stake1", 441, 616, 0, 0),
     new Components.ImageLocator("errorMessage", 476, 508, 320, 20),

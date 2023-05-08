@@ -37,7 +37,7 @@ export const BigSmallSicBoConfigs: Components.GameConfiguration = {
     hedgeBetGroups: [["big", "small"]],
     maxTimeout: 150 * 1000, // miliseconds,
     odds: {
-        anyTriple: 33,
+        anyTriple: 31,
         big: 2,
         double: 3.5,
         single: 2,

@@ -1,12 +1,12 @@
 import { HappyFishConfigs } from "../happy-fish-configs";
-import { SmokeBases, Components } from "sc-automation-core";
+import { E2EBases, Components } from "sc-automation-core";
 
-class HappyFishE2ESpec extends SmokeBases.SlotGameBase {
+class HappyFishE2ESpec extends E2EBases.SlotGameBase {
     /**
      *
      */
     constructor() {
-        const e2eOptions: SmokeBases.IBaseOptions = {
+        const e2eOptions: E2EBases.IBaseOptions = {
             placeBetChoices: [HappyFishConfigs.choices[0], HappyFishConfigs.choices[1]],
             gameConfiguration: HappyFishConfigs,
             locators: Components.ClassicSlotLocators,

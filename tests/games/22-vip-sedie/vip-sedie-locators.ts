@@ -2,7 +2,7 @@ import { Components } from "sc-automation-core";
 
 export const VipSedieLocators = [
     new Components.ImageLocator("dealer", 556, 20, 165, 212),
-    new Components.ImageLocator("evenChoice", 176, 286, 359, 41),
+    new Components.ImageLocator("evenChoice", 176, 286, 180, 41),
     new Components.ImageLocator("evenOwnbet", 329, 368, 28, 25),
     new Components.ImageLocator("oddChoice", 741, 277, 292, 53),
     new Components.ImageLocator("oddOwnbet", 866, 356, 97, 28),
