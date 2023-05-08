@@ -8,3 +8,4 @@ docker-build-game-49:
         - tests/games/49*/**/*
         - package.json
         - playwright.config.ts
+        - Dockerfile

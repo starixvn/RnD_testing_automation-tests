@@ -8,3 +8,4 @@ docker-build-game-38:
         - tests/games/38*/**/*
         - package.json
         - playwright.config.ts
+        - Dockerfile

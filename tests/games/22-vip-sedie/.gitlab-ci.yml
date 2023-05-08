@@ -8,3 +8,4 @@ docker-build-game-22:
         - tests/games/22*/**/*
         - package.json
         - playwright.config.ts
+        - Dockerfile

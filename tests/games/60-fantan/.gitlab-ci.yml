@@ -8,3 +8,4 @@ docker-build-game-60:
         - tests/games/60*/**/*
         - package.json
         - playwright.config.ts
+        - Dockerfile

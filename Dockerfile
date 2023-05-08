@@ -4,7 +4,8 @@ ARG gameId
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
-COPY tests/games/$gameId-* /app/tests/games
+RUN mkdir -p /app/tests/games/$gameId
+COPY tests/games/$gameId-* /app/tests/games/$gameId
 COPY playwright.config.ts .
 COPY package.json .
 COPY .npmrc .

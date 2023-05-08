@@ -8,3 +8,4 @@ docker-build-game-8:
         - tests/games/8*/**/*
         - package.json
         - playwright.config.ts
+        - Dockerfile
