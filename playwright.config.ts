@@ -3,7 +3,7 @@ import { devices } from "@playwright/test";
 
 const testMatch = `${process.env.npm_config_gameid}*`;
 const config: PlaywrightTestConfig = {
-    retries: 1,
+    retries: 0,
     testDir: "./tests",
     timeout: 120 * 1000,
     expect: {
@@ -43,6 +43,13 @@ const config: PlaywrightTestConfig = {
         {
             name: "E2E_CI",
             testMatch: `**/${testMatch}/e2e-tests/*.e2e.spec.ts`,
+            use: {
+                ...devices["Desktop Chrome"],
+            },
+        },
+        {
+            name: "Guide",
+            testMatch: `**/${testMatch}/*.gameguide.spec.ts`,
             use: {
                 ...devices["Desktop Chrome"],
             },

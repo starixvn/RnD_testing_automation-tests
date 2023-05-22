@@ -1,4 +1,4 @@
-import { FourGuardiansLocators } from "./four-guardians-locators";
+import { FourGuardiansLocators } from "../four-guardians-locators";
 import { FourGuardiansConfigs } from "../four-guardians-configs";
 import { SmokeBases } from "sc-automation-core";
 
@@ -13,6 +13,7 @@ class FourGuardiansSmokeSpec extends SmokeBases.SlotGameBase {
             locators: FourGuardiansLocators,
             waitBetTimeout: 5000,
             snapshotFolderPath: __filename,
+            placeBetAmount: process.env.npm_config_project === "vg"? 10 : 1
         };
         super(smokeOptions);
     }

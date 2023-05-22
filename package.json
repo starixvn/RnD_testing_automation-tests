@@ -1,11 +1,13 @@
 {
   "name": "automation-tests",
   "version": "1.0.0",
-  "description": "",
+  "description": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "playwright test --project=Smoke_CI",
-    "e2e": "playwright test --project=E2E_CI "
+    "e2e": "playwright test --project=E2E_CI ",
+    "guide": "playwright test --project=Guide "
+
   },
   "repository": {
     "type": "git",
@@ -14,7 +16,7 @@
   "author": "pentagon@luminet.com",
   "license": "MIT",
   "dependencies": {
-    "sc-automation-core": "^1.2.0"
+    "sc-automation-core": "1.5.1"
   },
   "devDependencies": {
     "@playwright/test": "1.24.0",

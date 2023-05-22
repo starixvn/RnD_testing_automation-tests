@@ -4,10 +4,10 @@ export const MagicForestConfigs: Components.GameConfiguration = {
     id: 64,
     name: "MagicForest",
     durations: {
-        wholeRound: 45 * 1000,
-        placingBets: 30 * 1000,
-        lockingBet: 5 * 1000,
-        shakeThePlateDuration: 9 * 1000,
+        wholeRound: 0,
+        placingBets: 0,
+        lockingBet: 0,
+        shakeThePlateDuration: 0,
     },
     choices: ["Payline1", "AllPayline", "OddPayline", "EvenPayline"],
     maxTimeout: 100 * 1000, // miliseconds,
@@ -33,6 +33,8 @@ export const MagicForestConfigs: Components.GameConfiguration = {
         sit: "supertestsaba69",
         uat: "IT55Test789",
         prod: "supertestte120201004",
+        vguat: "TestSep2743",
+        vgprod: "VNtest046",
     },
     productId: "1671"
 };
