@@ -1,4 +1,4 @@
-import { expect } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import { BitCoinMasterLocators } from "../bitcoin-master-locators";
 import { BitCoinMasterConfigs } from "../bitcoin-master-configs";
 import { SmokeBases, Components } from "sc-automation-core";
@@ -50,7 +50,10 @@ class BitCoinMasterSmokeSpec extends SmokeBases.MiniGameBase {
     }
 
     protected placeBetAndSettleTests(): void {
-        //limit feature, will implement later
+        Components.test("Place bet and settle", async () => {
+            // Assert
+            test.fail();
+        });
     }
 
     protected hedgeBetTests(): void {

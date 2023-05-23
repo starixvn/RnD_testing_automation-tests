@@ -13,7 +13,7 @@ class FanTanSmokeSpec extends SmokeBases.TableGameBase {
       waitBetTimeout: 10000,
       locators: FanTanLocators,
       snapshotFolderPath: __filename,
-      placeBetAmount: process.env.npm_config_project === "vg" ? 10 : 1,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
 
     super(smokeOptions);
