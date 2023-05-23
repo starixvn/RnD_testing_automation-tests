@@ -42,6 +42,9 @@ smoketest:
     - cd /app
     - npm run test --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
+    - cp -r /app/test-results ./test-results
+    - cp -r /app/screenshots ./screenshots
+    - cp -r /app/playwright-report ./playwright-report
     - du -hs /ms-playwright/*
   retry: 0
   rules:
@@ -66,6 +69,9 @@ e2etest:
     - cd /app
     - npm run e2e --env=$ENV --gameid=$GAMEID --project=$STACK_NAME
   after_script:
+    - cp -r /app/test-results ./test-results
+    - cp -r /app/screenshots ./screenshots
+    - cp -r /app/playwright-report ./playwright-report
     - du -hs /ms-playwright/*
   retry: 1
   rules:
