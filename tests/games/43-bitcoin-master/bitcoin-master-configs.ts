@@ -4,7 +4,7 @@ export const BitCoinMasterConfigs: Components.GameConfiguration = {
   id: 43,
   name: "bitcoinmaster",
   durations: {
-    wholeRound: 119 * 1000,
+    wholeRound: 117 * 1000,
     placingBets: 45 * 1000,
     lockingBet: 60 * 1000,
     shakeThePlateDuration: 14 * 1000,

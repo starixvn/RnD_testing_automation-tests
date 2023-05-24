@@ -15,6 +15,7 @@ export const FourGuardiansLocators = [
   new ImageLocator("historyMenu", 53, 360),
   new ImageLocator("historyPopup", 500, 38, 250, 68),
   new ImageLocator("stake1", 307, 653, 70, 50),
+  new ImageLocator("stake10", 307, 653, 70, 50),
   new ImageLocator("spin", 1180, 632),
   new ImageLocator("submitPayline", 542, 623, 200, 40),
   new ImageLocator("clearChoices", 866, 580, 135, 35),

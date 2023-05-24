@@ -12,7 +12,7 @@ export const WayToGoalLocators = [
   new ImageLocator("historyMenu", 64, 346, 0, 0),
   new ImageLocator("historyPopup", 270, 48, 200, 50),
   new ImageLocator("stake1", 450, 603, 70, 50),
-  new ImageLocator("stake5", 450, 603, 70, 50),
+  new ImageLocator("stake10", 450, 603, 70, 50),
   new ImageLocator("spin", 1011, 596, 60, 60),
   new ImageLocator("submitPayline", 559, 567, 160, 40),
   new ImageLocator("clearChoices", 890, 506, 150, 30),

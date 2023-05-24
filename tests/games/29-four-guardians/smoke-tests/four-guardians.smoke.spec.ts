@@ -1,6 +1,7 @@
 import { FourGuardiansLocators } from "../four-guardians-locators";
 import { FourGuardiansConfigs } from "../four-guardians-configs";
-import { SmokeBases } from "sc-automation-core";
+import { SmokeBases, Components } from "sc-automation-core";
+import { expect } from "@playwright/test";
 
 class FourGuardiansSmokeSpec extends SmokeBases.SlotGameBase {
   /**
@@ -16,6 +17,20 @@ class FourGuardiansSmokeSpec extends SmokeBases.SlotGameBase {
       placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
     super(smokeOptions);
+  }
+
+  protected inGameOddsTests(): void {
+    Components.test("AND odds should be correct", async () => {
+      await this.game.waitForTimeout(this.options.waitBetTimeout);
+      // Assert
+      const configOdds =
+        process.env.npm_config_project === "l2"
+          ? this.options.gameConfiguration[
+              `${process.env.npm_config_project}odds`
+            ]
+          : this.options.gameConfiguration.odds;
+      expect(this.game.odds).toStrictEqual(configOdds);
+    });
   }
 }
 
