@@ -14,6 +14,7 @@ class BitCoinMasterSmokeSpec extends SmokeBases.MiniGameBase {
       locators: BitCoinMasterLocators,
       waitBetTimeout: 7000,
       snapshotFolderPath: __filename,
+      placeBetAmount: process.env.npm_config_project === "l2" ? 10 : 1,
     };
 
     super(smokeOptions);
@@ -52,7 +53,7 @@ class BitCoinMasterSmokeSpec extends SmokeBases.MiniGameBase {
       Components.test.setTimeout(this.options.gameConfiguration.maxTimeout * 2);
       const bet = {
         choice: this.options.placeBetChoices[0],
-        amount: this.options.placeBetAmount ?? 1,
+        amount: this.options.placeBetAmount,
       };
 
       // Act

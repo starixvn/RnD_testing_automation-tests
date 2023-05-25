@@ -24,11 +24,25 @@ class LotterySmokeSpec extends SmokeBases.TableGameBase {
 
   protected maxBetTests(): void {}
 
+  protected inGameOddsTests(): void {
+    Components.test("AND odds should be correct", async () => {
+      await this.game.waitForTimeout(this.options.waitBetTimeout);
+      // Assert
+      const configOdds =
+        process.env.npm_config_project === "l2"
+          ? this.options.gameConfiguration[
+              `${process.env.npm_config_project}odds`
+            ]
+          : this.options.gameConfiguration.odds;
+      expect(this.game.odds).toStrictEqual(configOdds);
+    });
+  }
+
   protected placeBetAndSettleTests(): void {
     Components.test("THEN player able to place a bet and settle", async () => {
       Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
       await this.game.clickLocator("othersChoice");
-      const bet = { choice: { group: "others", betchoice: "big" }, amount: 1 };
+      const bet = { choice: { group: "others", betchoice: "big" }, amount: this.options.placeBetAmount };
       this.game.attachSocketAndCaptureEvent(GameEvent.WinStatus);
 
       // Act
@@ -46,6 +60,7 @@ class LotterySmokeSpec extends SmokeBases.TableGameBase {
       expect(await toMatchWinning(settledResults, bet)).toBeTruthy();
     });
   }
+
 }
 
 new LotterySmokeSpec().start();

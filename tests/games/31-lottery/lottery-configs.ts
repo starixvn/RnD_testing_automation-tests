@@ -1,6 +1,10 @@
 import { Components } from "sc-automation-core";
 
-export const LotteryConfigs: Components.GameConfiguration = {
+class ILotteryConfigs extends Components.GameConfiguration {
+  l2odds: any;
+}
+
+export const LotteryConfigs: ILotteryConfigs = {
   id: 31,
   name: "Lottery",
   durations: {
@@ -30,6 +34,14 @@ export const LotteryConfigs: Components.GameConfiguration = {
     parlay2: 13,
     parlay3: 50,
     parlay4: 120,
+  },
+  l2odds: {
+    "4Sets": 24,
+    special: 90,
+    head: 9,
+    others: 1.96,
+    tail: 9,
+    "27Sets": 3.6,
   },
   betBoard: false,
   accounts: {
