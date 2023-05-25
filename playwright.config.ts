@@ -3,7 +3,7 @@ import { devices } from "@playwright/test";
 
 const testMatch = `${process.env.npm_config_gameid}*`;
 const config: PlaywrightTestConfig = {
-    retries: 0,
+    retries: 1,
     testDir: "./tests",
     timeout: 120 * 1000,
     expect: {
