@@ -53,7 +53,7 @@ const followCardAndSettle = async (game: any) => {
   await game.attachSocketAndCaptureEvent(GameEvent.EndBet);
   await game.waitForTimeout();
   await game.clickLocator("standcard");
-  await game.waitForTimeout();
+  await game.waitForTimeout(8000);
   await game.clickLocator("followcard");
   await game.waitForTimeout();
   let endbet = await game.latestCaptureEvent(GameEvent.EndBet);
