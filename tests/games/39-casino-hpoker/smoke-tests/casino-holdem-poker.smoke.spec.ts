@@ -51,10 +51,9 @@ new CasinoHoldemPokerSmokeSpec().start();
 
 const followCardAndSettle = async (game: any) => {
   await game.attachSocketAndCaptureEvent(GameEvent.EndBet);
-  await game.waitForTimeout();
-  await game.clickLocator("standcard");
   await game.waitForTimeout(8000);
-  await game.clickLocator("followcard");
+  await game.clickLocator("standcard",10000);
+  await game.clickLocator("followcard",5000);
   await game.waitForTimeout();
   let endbet = await game.latestCaptureEvent(GameEvent.EndBet);
   let settledResults = {
