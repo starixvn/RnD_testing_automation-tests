@@ -71,12 +71,10 @@ new HiLoSmokeSpec().start();
 const placeBethilo = async (game: any, choice: string, amount: number) => {
   await game.attachSocketAndCaptureEvent(GameEvent.EndDeal);
   await game.clickLocator("stake" + amount);
-  await game.clickLocator("startbet");
-  await game.waitForTimeout(2000);
-  await game.clickLocator(choice + "Choice");
-  await game.waitForTimeout(2000);
+  await game.clickLocator("startbet",2000);
+  await game.clickLocator(choice + "Choice",1000);
+  await game.clickLocator('lo' + "Choice",2000); // click multiple choices aim to handle case first card is A
   await game.clickLocator("collect");
-  await game.waitForTimeout(500);
   let message = await game.latestCaptureEvent(GameEvent.EndDeal);
   let settledResults = {
     settlementResult: message?.result?.settlementResult,
