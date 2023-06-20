@@ -80,5 +80,6 @@ e2etest:
       - playwright-report
       - screenshots
       - test-results   
+      - video
     when: always
     expire_in: 1 day

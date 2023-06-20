@@ -19,8 +19,8 @@ const config: PlaywrightTestConfig = {
     actionTimeout: 0,
     trace: "off",
     video: {
-      mode: 'on', 
-      size: { width: 640, height: 480 }
+      mode: "on-first-retry",
+      size: { width: 640, height: 480 },
     },
     headless: true,
     viewport: {
