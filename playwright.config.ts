@@ -18,6 +18,10 @@ const config: PlaywrightTestConfig = {
   use: {
     actionTimeout: 0,
     trace: "off",
+    video: {
+      mode: 'on', 
+      size: { width: 640, height: 480 }
+    },
     headless: true,
     viewport: {
       width: 1280,
