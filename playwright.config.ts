@@ -17,11 +17,7 @@ const config: PlaywrightTestConfig = {
   reporter: [["html", { open: "never" }]],
   use: {
     actionTimeout: 0,
-    trace: "off",
-    video: {
-      mode: "on-first-retry",
-      size: { width: 640, height: 480 },
-    },
+    trace: "on-first-retry",
     headless: true,
     viewport: {
       width: 1280,
